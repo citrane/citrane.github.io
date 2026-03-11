@@ -1,45 +1,7 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>citrane</title>  <style> :root {   --primary: #2196F3;   --primary-dark: #1976D2;   --accent: #FF4081;   --background: #F5F5F5;   --surface: #FFFFFF;   --text-primary: rgba(0,0,0,0.87);   --text-secondary: rgba(0,0,0,0.54); }  body {   font-family: 'Roboto', sans-serif;   margin: 0;   background: var(--background);   color: var(--text-primary); }   .appbar {   height: 64px;   background: var(--primary);   color: white;   display: flex;   align-items: center;   padding: 0 24px;   font-size: 20px;   font-weight: 500;   box-shadow: 0 2px 5px rgba(0,0,0,0.26); } .tabs {   display: flex;   background: var(--primary-dark); }  .tabs button {   flex: 1;   padding: 16px;   border: none;   background: var(--primary-dark);   color: white;   font-weight: 500;   cursor: pointer;   transition: background 0.2s; }  .tabs button.active, .tabs button:hover {   background: var(--primary); }  .drawer {   position: fixed;   width: 280px;   height: 100%;   background: var(--surface);   top: 0;   left: 0;   box-shadow: 2px 0 5px rgba(0,0,0,0.26);   padding-top: 64px; }  .drawer a {   display: block;   padding: 16px 24px;   text-decoration: none;   color: var(--text-primary); }  .drawer a:hover {   background: rgba(0,0,0,0.05); }  .main {   margin-left: 280px;   padding: 24px; }   .card {   background: var(--surface);   border-radius: 2px;   padding: 16px;   margin-bottom: 24px;   box-shadow:     0 2px 2px rgba(0,0,0,0.14),     0 1px 5px rgba(0,0,0,0.12),     0 3px 1px -2px rgba(0,0,0,0.20);   transition: box-shadow 0.2s; }  .card:hover {   box-shadow:     0 8px 10px rgba(0,0,0,0.14),     0 3px 14px rgba(0,0,0,0.12),     0 5px 5px rgba(0,0,0,0.20); }   .button {   background: var(--primary);   border: none;   padding: 10px 16px;   color: white;   border-radius: 2px;   cursor: pointer;   font-weight: 500;   position: relative;   overflow: hidden; }   .button::after {   content: "";   position: absolute;   background: rgba(255,255,255,0.4);   border-radius: 50%;   transform: scale(0);   opacity: 0;   width: 100px;   height: 100px;   pointer-events: none; }  .button:active::after {   transform: scale(3);   opacity: 1;   transition: transform 0.4s, opacity 0.8s; }  .fab {   position: fixed;   right: 24px;   bottom: 24px;   width: 56px;   height: 56px;   border-radius: 50%;   background: var(--accent);   color: white;   display: flex;   align-items: center;   justify-content: center;   font-size: 28px;   box-shadow:     0 6px 10px rgba(0,0,0,0.30),     0 1px 18px rgba(0,0,0,0.22),     0 3px 5px rgba(0,0,0,0.20);   cursor: pointer;   transition: transform 0.2s ease; }  .fab:hover { transform: scale(1.08); }  .switch {   position: relative;   display: inline-block;   width: 36px;   height: 20px; }  .switch input {   opacity: 0;   width: 0;   height: 0; }  .switch .slider {   position: absolute;   cursor: pointer;   top: 0; left: 0; right: 0; bottom: 0;   background: rgba(0,0,0,0.1);   border-radius: 10px;   transition: background 0.2s; }  .switch .slider:before {   content: "";   position: absolute;   height: 16px;   width: 16px;   left: 2px;   bottom: 2px;   background: grey;   border-radius: 50%;transition: transform 0.2s; }  .switch input:checked + .slider {   background: rgba(0,0,0,0.2); }  .switch input:checked + .slider:before {   transform: translateX(16px);   background: #33B5E5;   box-shadow: -1px 1px 4.5px rgba(0,0,0,0.6); } .slider {   position: absolute;   cursor: pointer;   top: 0; left: 0; right: 0; bottom: 0;   background: #ccc;   border-radius: 14px;   transition: .4s; }  .slider:before {   position: absolute;   content: "";   height: 22px;   width: 22px;   left: 3px;   bottom: 3px;   background: white;   border-radius: 50%;   transition: .4s; }  input:checked + .slider {   background: var(--primary); }  input:checked + .slider:before {   transform: translateX(20px); }  input[type=range] {   -webkit-appearance: none;   width: 100%;   height: 4px;   border-radius: 2px;   background: #ddd;   outline: none; }  input[type=range]::-webkit-slider-thumb {   -webkit-appearance: none;   width: 20px;   height: 20px;   background: var(--primary);   border-radius: 50%;   cursor: pointer;   box-shadow: 0 2px 2px rgba(0,0,0,0.2); }  input[type=checkbox], input[type=radio] {   width: 18px; height: 18px;   cursor: pointer;   accent-color: var(--primary);   margin-right: 8px; }
-
-
-</style> 
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>citrane</title><link rel="stylesheet" href="style.css">
 </head>  <body>  <div class="appbar">citrane<small><small><small><small>™</small></small></small></small></div>
   <div class="drawer">   <a href="beta">Beta</a>   <a href="gallery">Gallery</a></div>  
   
   <div class="main">    <div class="card" style="background: #425760; color: white;">     <h2 style="font-size: 10px; text-transform: uppercase;">citrane</h2>     <p>citrane, pronounced "site rain" is a private, fully independent search engine with a nice UI.</p>
        </div>   <div class="card" style="background: #425760; color: white;">     <h2 style="font-size: 10px; text-transform: uppercase;">changelog (for this website)</h2>     <ul><li>11 Mar: updated info site design</li></ul>
-       </div>    </div>  <div class="fab">+</div>
-	   <div class="appbar">&copy; citrane | all rights reserved.</div>
-				<style>.drawer {
-  position: fixed;
-  width: 280px;
-  height: 100%;
-  background: var(--surface);
-  top: 0;
-  left: -280px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.26);
-  padding-top: 64px;
-  transition: left 0.3s ease;
-}
-
-.drawer.open {
-  left: 0;
-}
-
-.main {
-  margin-left: 0;
-  transition: margin-left 0.3s ease;
-}
-
-.main.drawer-open {
-  margin-left: 280px;
-  }</style><script>
-  const fab = document.querySelector('.fab');
-  const drawer = document.querySelector('.drawer');
-  const main = document.querySelector('.main');
-
-  fab.addEventListener('click', () => {
-    drawer.classList.toggle('open');
-    main.classList.toggle('drawer-open');
-  });
-</script>
-				</body> </html>
+       </div>    </div><div class="fab">+</div><div class="appbar">&copy; citrane | all rights reserved.</div><script src="fab.js"></script></body></html>
