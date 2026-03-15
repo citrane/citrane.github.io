@@ -1,1 +1,27 @@
-<h1>404</h1>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+<title>404 Not Found</title>
+</head>
+<body>
+
+<h1>Not Found</h1>
+<p id="msg"></p>
+
+<hr>
+<address id="addr"></address>
+
+<script>
+const path = window.location.pathname + window.location.search;
+const host = window.location.hostname;
+const port = window.location.port || (window.location.protocol === "https:" ? "443" : "80");
+
+document.getElementById("msg").textContent =
+  "The requested URL " + path + " was not found on this server.";
+
+document.getElementById("addr").textContent =
+  "Apache/2.4.57 (Debian) Server at " + host + " Port " + port;
+</script>
+
+</body>
+</html>
