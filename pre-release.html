@@ -39,7 +39,7 @@ async function fetchResults(q){
   resultsDiv.innerHTML = "Loading...";
 
   try{
-    const res = await fetch(`https://mkkp33-5000.csb.app/search?q=${encodeURIComponent(q)}`);
+    const res = await fetch(`https://I will replace this, it is hidden for security/search?q=${encodeURIComponent(q)}`);
     const data = await res.json();
 
     renderResults(data.results);
